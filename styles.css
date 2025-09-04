@@ -1,18 +1,23 @@
+/* General container for the entire exercise page.
+  - Changed to full width and aligned to the left.
+  - Added right-to-left text direction.
+*/
 .eng-exercise-container {
-    max-width: 900px;
-    margin: 20px auto;
+    width: 100%; /* Changed from max-width to fit screen width */
+    margin: 20px 0; /* Changed from 'auto' to align container to the left */
     padding: 20px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     color: #333;
-    direction:ltr;
-    text-align:left;
+    direction: rtl; /* Added for right-to-left layout */
+    box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
+/* Header section containing the main title and subtitle */
 .eng-header {
-    text-align: center;
+    text-align: left; /* Aligned text to the left */
     margin-bottom: 30px;
     background: rgba(255, 255, 255, 0.95);
     padding: 30px;
@@ -20,6 +25,7 @@
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
+/* Main title style */
 .eng-title {
     font-size: 2.5rem;
     font-weight: 700;
@@ -31,18 +37,20 @@
     background-clip: text;
 }
 
+/* Subtitle style */
 .eng-subtitle {
     font-size: 1.2rem;
     color: #718096;
     margin-bottom: 20px;
 }
 
+/* Instructions box style */
 .eng-instructions {
     text-align: left;
     background: #f7fafc;
     padding: 20px;
     border-radius: 10px;
-    border-left: 4px solid #667eea;
+    border-right: 4px solid #667eea; /* Changed from border-left for RTL */
 }
 
 .eng-instructions h3 {
@@ -53,23 +61,24 @@
 .eng-instructions ul {
     list-style: none;
     padding: 0;
-    text-align:left;
+    text-align: left;
 }
 
 .eng-instructions li {
     margin-bottom: 8px;
-    padding-left: 25px;
+    padding-right: 25px; /* Changed from padding-left for RTL */
     position: relative;
 }
 
 .eng-instructions li::before {
     content: "✓";
     position: absolute;
-    left: 0;
+    right: 0; /* Changed from left for RTL */
     color: #48bb78;
     font-weight: bold;
 }
 
+/* Individual exercise card styling */
 .eng-exercise-card {
     background: rgba(255, 255, 255, 0.95);
     border-radius: 15px;
@@ -84,6 +93,7 @@
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
 }
 
+/* Collapsible header for each exercise */
 .eng-exercise-header {
     background: linear-gradient(135deg, #4299e1, #3182ce);
     color: white;
@@ -113,6 +123,7 @@
     transform: rotate(180deg);
 }
 
+/* Content area within each exercise card */
 .eng-exercise-content {
     padding: 25px;
     display: none;
@@ -134,6 +145,7 @@
     }
 }
 
+/* Word bank for fill-in-the-blank exercises */
 .eng-word-bank {
     margin-bottom: 25px;
     padding: 20px;
@@ -171,6 +183,7 @@
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
 
+/* Question container */
 .eng-questions {
     margin-bottom: 25px;
 }
@@ -183,6 +196,7 @@
     font-weight: 500;
 }
 
+/* Input field for fill-in-the-blank */
 .eng-blank {
     border: none;
     border-bottom: 2px solid #cbd5e0;
@@ -217,6 +231,7 @@
     color: #742a2a;
 }
 
+/* Button container */
 .eng-buttons {
     display: flex;
     gap: 15px;
@@ -254,12 +269,13 @@
     box-shadow: 0 6px 20px rgba(237, 137, 54, 0.4);
 }
 
+/* Score display area */
 .eng-score-display {
     padding: 15px;
     border-radius: 10px;
     font-weight: 600;
     font-size: 1.1rem;
-    text-align: center;
+    text-align: left; /* Aligned text to the left */
     display: none;
 }
 
@@ -303,7 +319,6 @@
 .eng-matching-column h4 {
     color: #4a5568;
     margin-bottom: 15px;
-    text-align: center;
-
-    font-size: 1.1rem
-
+    text-align: left; /* Aligned text to the left */
+    font-size: 1.1rem;
+}
