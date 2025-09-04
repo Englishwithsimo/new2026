@@ -11,7 +11,7 @@
     border-radius: 20px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
     color: #333;
-    direction: rtl; /* Added for right-to-left layout */
+    direction: ltr; /* Added for right-to-left layout */
     box-sizing: border-box; /* Ensures padding is included in the width */
 }
 
@@ -322,3 +322,4 @@
     text-align: left; /* Aligned text to the left */
     font-size: 1.1rem;
 }
+
