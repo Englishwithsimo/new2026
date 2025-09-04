@@ -2,6 +2,90 @@
   - Changed to full width and aligned to the left.
   - Added right-to-left text direction.
 */
+.blog-thumbnail {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .blog-thumbnail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .thumbnail-image {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-thumbnail:hover .thumbnail-image {
+            transform: scale(1.05);
+        }
+
+        .thumbnail-content {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .thumbnail-title {
+            font-size: x-large;
+            font-weight: bold;
+            color: red;
+            margin: 0 0 12px 0;
+            line-height: 1.4;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .thumbnail-excerpt {
+            color: blue;
+            font-size: large;
+           font-weight: bold;
+            line-height: 1.6;
+            margin: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .thumbnail-content {
+                padding: 16px;
+            }
+            
+            .thumbnail-title {
+                font-size: 18px;
+            }
+            
+            .thumbnail-excerpt {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .thumbnail-content {
+                padding: 14px;
+            }
+            
+            .thumbnail-title {
+                font-size: 16px;
+                margin: 0 0 10px 0;
+            }
+            
+            .thumbnail-excerpt {
+                font-size: 13px;
+                line-height: 1.5;
+            }
+        }
 .eng-exercise-container {
     width: 100%; /* Changed from max-width to fit screen width */
     margin: 20px 0; /* Changed from 'auto' to align container to the left */
@@ -325,5 +409,6 @@
     text-align: left; /* Aligned text to the left */
     font-size: 1.1rem;
 }
+
 
 
