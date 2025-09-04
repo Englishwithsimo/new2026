@@ -128,10 +128,13 @@
     padding: 25px;
     display: none;
     animation: slideDown 0.3s ease-out;
+  
 }
 
 .eng-exercise-content.active {
     display: block;
+    direction:ltr;
+  text-align:left;
 }
 
 @keyframes slideDown {
@@ -322,4 +325,5 @@
     text-align: left; /* Aligned text to the left */
     font-size: 1.1rem;
 }
+
 
